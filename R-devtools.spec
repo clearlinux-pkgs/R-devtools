@@ -18,6 +18,7 @@ Requires: R-whisker
 BuildRequires : R-git2r
 BuildRequires : R-httr
 BuildRequires : R-knitr
+BuildRequires : R-roxygen2
 BuildRequires : R-rstudioapi
 BuildRequires : R-testthat
 BuildRequires : R-whisker
