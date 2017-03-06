@@ -4,21 +4,23 @@
 #
 Name     : R-devtools
 Version  : 1.12.0
-Release  : 31
+Release  : 32
 URL      : https://cran.r-project.org/src/contrib/devtools_1.12.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/devtools_1.12.0.tar.gz
 Summary  : Tools to Make Developing R Packages Easier
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+ MIT
 Requires: R-devtools-lib
-Requires: R-withr
-Requires: R-httr
 Requires: R-git2r
+Requires: R-httr
+Requires: R-memoise
 Requires: R-rstudioapi
 Requires: R-whisker
+Requires: R-withr
 BuildRequires : R-git2r
 BuildRequires : R-httr
 BuildRequires : R-knitr
+BuildRequires : R-memoise
 BuildRequires : R-roxygen2
 BuildRequires : R-rstudioapi
 BuildRequires : R-testthat
@@ -46,9 +48,11 @@ lib components for the R-devtools package.
 
 %build
 export LANG=C
+export SOURCE_DATE_EPOCH=1488813286
 
 %install
 rm -rf %{buildroot}
+export SOURCE_DATE_EPOCH=1488813286
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -58,7 +62,7 @@ export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
-R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library devtools
+R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library devtools
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
 export LANG=C
