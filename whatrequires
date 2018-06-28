@@ -1,6 +1,5 @@
 # This file contains recursive sources that require this package
 R-NMF
-R-RcppProgress
 R-devtools
 R-doRNG
 R-modelr
