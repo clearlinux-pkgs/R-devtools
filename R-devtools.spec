@@ -4,7 +4,7 @@
 #
 Name     : R-devtools
 Version  : 1.13.6
-Release  : 59
+Release  : 60
 URL      : https://cran.r-project.org/src/contrib/devtools_1.13.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/devtools_1.13.6.tar.gz
 Summary  : Tools to Make Developing R Packages Easier
