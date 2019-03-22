@@ -1,4 +1,5 @@
 # This file contains recursive sources that require this package
+R-pkgdown
 R-pkgmaker
 R-reprex
 R-roxygen2

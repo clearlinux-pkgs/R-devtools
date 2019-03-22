@@ -4,28 +4,40 @@
 #
 Name     : R-devtools
 Version  : 2.0.1
-Release  : 66
+Release  : 67
 URL      : https://cran.r-project.org/src/contrib/devtools_2.0.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/devtools_2.0.1.tar.gz
 Summary  : Tools to Make Developing R Packages Easier
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
-Requires: R-callr
-Requires: R-memoise
-Requires: R-pkgdown
-Requires: R-rcmdcheck
-Requires: R-remotes
-Requires: R-rmarkdown
-Requires: R-sessioninfo
-Requires: R-usethis
+Requires: R-backports
+Requires: R-fs
+Requires: R-git2r
+Requires: R-glue
+Requires: R-httr
+Requires: R-jsonlite
+Requires: R-pkgbuild
+Requires: R-pkgload
+Requires: R-rhub
+Requires: R-rstudioapi
+BuildRequires : R-backports
 BuildRequires : R-callr
+BuildRequires : R-fs
+BuildRequires : R-git2r
+BuildRequires : R-glue
+BuildRequires : R-httr
+BuildRequires : R-jsonlite
 BuildRequires : R-knitr
 BuildRequires : R-memoise
+BuildRequires : R-pkgbuild
 BuildRequires : R-pkgdown
+BuildRequires : R-pkgload
 BuildRequires : R-rcmdcheck
 BuildRequires : R-remotes
+BuildRequires : R-rhub
 BuildRequires : R-rmarkdown
 BuildRequires : R-roxygen2
+BuildRequires : R-rstudioapi
 BuildRequires : R-sessioninfo
 BuildRequires : R-testthat
 BuildRequires : R-usethis
@@ -46,10 +58,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549269647
+export SOURCE_DATE_EPOCH=1553292220
 
 %install
-export SOURCE_DATE_EPOCH=1549269647
+export SOURCE_DATE_EPOCH=1553292220
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
