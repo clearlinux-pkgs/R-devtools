@@ -4,7 +4,7 @@
 #
 Name     : R-devtools
 Version  : 2.2.1
-Release  : 76
+Release  : 77
 URL      : https://cran.r-project.org/src/contrib/devtools_2.2.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/devtools_2.2.1.tar.gz
 Summary  : Tools to Make Developing R Packages Easier
